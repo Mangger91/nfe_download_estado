@@ -1,0 +1,6 @@
+.env
+*.pem
+*.pfx
+__pyache__/
+config/empresas.xlsx
+certificados/
