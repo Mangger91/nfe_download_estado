@@ -1,0 +1,30 @@
+# Projeto NFE_DOWNLOAD_ESTADO
+
+Este projeto realiza o download automático de NF-e diretamente do WebService da Receita Federal, utilizando o serviço `NFeDistribuicaoDFe`.
+
+## Funcionalidades
+
+- Conversão de certificados .pfx para .pem/.key
+- Leitura de planilha de empresas
+- Consulta de NF-e por CNPJ
+- Salvamento dos XMLs em estrutura:
+  `XML_RECEITA/NOME_EMPRESA/MM/APELIDO/`
+
+## Como usar
+
+1. Coloque os arquivos `.pfx` na pasta `certificados/`, seguindo o padrão:
+   `NOME_EMPRESA_SENHA.pfx`
+
+2. Execute:
+```bash
+python converter_certificados.py
+python main.py
+
+3. OS XMLs serão salvos automaticamente para cada empresa.
+
+Tecnologias usadas:
+- Python 3.11
+- Zeep (SOAP)
+- OpenSSL
+- Pandas
+- requests
